@@ -12,7 +12,7 @@ pipeline {
         stage(' Download artifact') {
             steps {
                 script {
-                    def nexusUrl = "http://192.168.31.70:8081/repository/${params.NEXUS_REPO}"
+                    def nexusUrl = "http://192.168.31.71:8081/repository/${params.NEXUS_REPO}"
                     def artifactPath = "${params.GROUP_ID.replace('.', '/')}/${params.ARTIFACT_ID}/${params.VERSION}/${params.ARTIFACT_ID}-${params.VERSION}.jar"
                     def downloadUrl = "${nexusUrl}/${artifactPath}"
 
